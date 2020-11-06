@@ -11,15 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Check-in',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: FeelingWheel.topLevel(),
-        ),
-      ),
+          body: Container(
+        color: Colors.white,
+        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+        child: FeelingWheel.fullWheel((feeling) => print(feeling.name)),
+      )),
     );
   }
 }
